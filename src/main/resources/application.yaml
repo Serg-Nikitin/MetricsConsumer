@@ -1,0 +1,14 @@
+application:
+  name: Metrics Consumer
+app:
+  kafka:
+    topic: "metric-topic"
+spring:
+  kafka:
+    consumer:
+      group-id: "metrics"
+      bootstrap-servers: "localhost:9092"
+      client-id: "metrics-consumer"
+      auto-offset-reset: earliest
+server:
+  port: 8082
