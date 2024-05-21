@@ -1,9 +1,17 @@
-application:
-  name: Metrics Consumer
 app:
   kafka:
     topic: "metric-topic"
 spring:
+  jpa:
+    hibernate:
+      ddl-auto: create
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+  datasource:
+    url: jdbc:postgresql://localhost:5432/init_db
+    username: admin
+    password: admin
   kafka:
     consumer:
       group-id: "metrics"
