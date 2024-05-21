@@ -7,5 +7,6 @@ import java.util.Optional;
 
 public interface ConsumerRepository extends JpaRepository<Metric, Integer> {
 
-    Optional<Metric> getByKey(String key);
+    Optional<Metric> getById(Long id);
+
 }

@@ -68,7 +68,6 @@ public class ConsumerConfig {
         executor.setConcurrencyLimit(10);
         var listenerTaskExecutor = new ConcurrentTaskExecutor(executor);
         factory.getContainerProperties().setListenerTaskExecutor(listenerTaskExecutor);
-//        factory.setCommonErrorHandler(new DefaultErrorHandler(new FixedBackOff(1000L, 2L)));
         return factory;
     }
 
